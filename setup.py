@@ -14,7 +14,7 @@ install_requires = [
 
 # Hacky check for whether CUDA is installed
 has_cuda = any("CUDA" in name.split("_") for name in os.environ.keys())
-install_requires.append("tensorflow-gpu==1.15.2" if has_cuda else "tensorflow==1.15.2")
+install_requires.append("tensorflow-gpu==2.3.1" if has_cuda else "tensorflow==2.3.1")
 
 version_file = Path(__file__).parent.joinpath("easybert", "VERSION.txt")
 version = version_file.read_text(encoding="UTF-8").strip()
